@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+  />
+</head>
+
+<body>
+    <header>
+        <h1>Dynamic Resume Builder</h1>
+    </header>
+
+    <main>
+        <section id="form-section">
+            <form id="resume-form">
+                <div class="form-group">
+                    <label for="name"><i class="fas fa-user"></i> Name:</label>
+                    <input type="text" id="name" placeholder="Enter your name" required>
+                </div>
+
+                <fieldset>
+                    <legend>Contact Information</legend>
+                    <div class="form-group">
+                        <label for="email"><i class="fas fa-envelope"></i> Email:</label>
+                        <input type="email" id="email" placeholder="Enter your email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone"><i class="fas fa-phone"></i> Phone:</label>
+                        <input type="tel" id="phone" placeholder="Enter your phone number" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="linkedIn"><i class="fab fa-linkedin"></i> LinkedIn:</label>
+                        <input type="url" id="linkedIn" placeholder="Enter LinkedIn Profile URL (https://www.linkedin/)">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="github"><i class="fab fa-github"></i> GitHub:</label>
+                        <input type="url" id="github" placeholder="Enter GitHub Profile URL (https://github/)">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="imageUpload"><i class="fas fa-image"></i> Profile Picture:</label>
+                        <input type="file" id="imageUpload" accept="image/*" required>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Professional Details</legend>
+                    <label for="objective">Objective:</label>
+                    <textarea id="objective" placeholder="Write your professional objective" rows="3" required></textarea>
+
+                    <label for="education">Education:</label>
+                    <textarea id="education" placeholder="Enter your educational background" rows="3" required></textarea>
+
+                    <label for="experience">Experience:</label>
+                    <textarea id="experience" placeholder="Describe your work experience" rows="3"></textarea>
+
+                    <label for="skills">Skills:</label>
+                    <textarea id="skills" placeholder="List your skills" rows="3" required></textarea>
+
+                    <label for="projects">Projects:</label>
+                    <textarea id="projects" placeholder="Project Name|URL, Project Name|URL" rows="3"></textarea>
+                </fieldset>
+
+                <button type="submit" class="btn-submit"><i class="fas fa-file-alt"></i> Generate Resume</button>
+            </form>
+        </section>
+
+        <section id="resume-display">
+            <!-- Dynamic resume will render here -->
+        </section>
+    </main>
+    <script src="index.js"></script>
+</body>
+
+</html>
